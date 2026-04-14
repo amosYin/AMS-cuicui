@@ -19,6 +19,11 @@ import { PerformanceAttribution } from './components/PerformanceAttribution';
 import { PositionTracking } from './components/PositionTracking';
 import { CycleAnalysis } from './components/CycleAnalysis';
 import { FactorAnalysis } from './components/FactorAnalysis';
+import { ProductPanorama } from './components/ProductPanorama';
+import { HoldingsPanorama } from './components/HoldingsPanorama';
+import { ProductComparison } from './components/ProductComparison';
+import { CorrelationAnalysis } from './components/CorrelationAnalysis';
+import { OptionExercise } from './components/OptionExercise';
 
 const PlaceholderModule = ({ name }: { name: string }) => (
   <div className="p-8">
@@ -41,7 +46,7 @@ const PlaceholderModule = ({ name }: { name: string }) => (
 );
 
 export default function App() {
-  const [currentModule, setCurrentModule] = React.useState('总览');
+  const [currentModule, setCurrentModule] = React.useState('产品全景');
 
   const renderContent = () => {
     switch (currentModule) {
@@ -61,6 +66,16 @@ export default function App() {
         return <TransactionFlow />;
       case '风险预警':
         return <RiskWarning />;
+      case '产品全景':
+        return <ProductPanorama />;
+      case '持仓全景':
+        return <HoldingsPanorama />;
+      case '产品对比':
+        return <ProductComparison />;
+      case '相关性分析':
+        return <CorrelationAnalysis />;
+      case '期权行权':
+        return <OptionExercise />;
       case '组合盈亏分析':
         return <PortfolioProfitLoss />;
       case '组合业绩归因':
