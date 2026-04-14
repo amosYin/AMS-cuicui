@@ -107,10 +107,10 @@ export const Sidebar = ({ currentModule, onModuleChange }: SidebarProps) => {
           <NavItem 
             icon={BarChart3} 
             label="绩效评估" 
-            subItems={["盈亏分析", "业绩归因 (Brinson/Campisi)", "因子分析 (风格/收益/归因)", "周期分析", "仓位追踪"]} 
+            subItems={["组合盈亏分析", "组合业绩归因", "仓位追踪", "周期分析", "因子风格", "因子收益", "因子归因"]} 
             onSubItemClick={onModuleChange}
             currentSubItem={currentModule}
-            active={["盈亏分析", "业绩归因 (Brinson/Campisi)", "因子分析 (风格/收益/归因)", "周期分析", "仓位追踪"].includes(currentModule)}
+            active={["组合盈亏分析", "组合业绩归因", "仓位追踪", "周期分析", "因子风格", "因子收益", "因子归因"].includes(currentModule)}
           />
           <NavItem 
             icon={LineChart} 

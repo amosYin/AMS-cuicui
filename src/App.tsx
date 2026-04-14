@@ -14,6 +14,11 @@ import { PositionReport } from './components/PositionReport';
 import { OperationReport } from './components/OperationReport';
 import { TransactionFlow } from './components/TransactionFlow';
 import { RiskWarning } from './components/RiskWarning';
+import { PortfolioProfitLoss } from './components/PortfolioProfitLoss';
+import { PerformanceAttribution } from './components/PerformanceAttribution';
+import { PositionTracking } from './components/PositionTracking';
+import { CycleAnalysis } from './components/CycleAnalysis';
+import { FactorAnalysis } from './components/FactorAnalysis';
 
 const PlaceholderModule = ({ name }: { name: string }) => (
   <div className="p-8">
@@ -56,6 +61,20 @@ export default function App() {
         return <TransactionFlow />;
       case '风险预警':
         return <RiskWarning />;
+      case '组合盈亏分析':
+        return <PortfolioProfitLoss />;
+      case '组合业绩归因':
+        return <PerformanceAttribution />;
+      case '仓位追踪':
+        return <PositionTracking />;
+      case '周期分析':
+        return <CycleAnalysis />;
+      case '因子风格':
+        return <FactorAnalysis initialTab="因子风格" />;
+      case '因子收益':
+        return <FactorAnalysis initialTab="因子收益" />;
+      case '因子归因':
+        return <FactorAnalysis initialTab="因子归因" />;
       default:
         return <PlaceholderModule name={currentModule} />;
     }
