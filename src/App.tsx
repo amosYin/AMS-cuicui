@@ -9,6 +9,10 @@ import { Header } from './components/Header';
 import { Dashboard } from './components/Dashboard';
 import { AssetAllocation } from './components/AssetAllocation';
 import { ValuationImport } from './components/ValuationImport';
+import { PositionReport } from './components/PositionReport';
+import { OperationReport } from './components/OperationReport';
+import { TransactionFlow } from './components/TransactionFlow';
+import { RiskWarning } from './components/RiskWarning';
 
 const PlaceholderModule = ({ name }: { name: string }) => (
   <div className="p-8">
@@ -41,6 +45,14 @@ export default function App() {
         return <AssetAllocation />;
       case '估值表导入':
         return <ValuationImport />;
+      case '头寸表':
+        return <PositionReport />;
+      case '运营报表':
+        return <OperationReport />;
+      case '交易流水':
+        return <TransactionFlow />;
+      case '风险预警':
+        return <RiskWarning />;
       default:
         return <PlaceholderModule name={currentModule} />;
     }
