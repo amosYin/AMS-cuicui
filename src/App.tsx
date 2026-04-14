@@ -9,6 +9,7 @@ import { Header } from './components/Header';
 import { Dashboard } from './components/Dashboard';
 import { AssetAllocation } from './components/AssetAllocation';
 import { ValuationImport } from './components/ValuationImport';
+import { PortfolioReport } from './components/PortfolioReport';
 import { PositionReport } from './components/PositionReport';
 import { OperationReport } from './components/OperationReport';
 import { TransactionFlow } from './components/TransactionFlow';
@@ -41,6 +42,8 @@ export default function App() {
     switch (currentModule) {
       case '总览':
         return <Dashboard />;
+      case '组合报告':
+        return <PortfolioReport />;
       case '资产配置':
         return <AssetAllocation />;
       case '估值表导入':
